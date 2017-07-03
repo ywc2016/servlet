@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>servlet</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Define servlets that are included in the example application -->
+	<servlet>
+		<servlet-name>hello</servlet-name>              <!--Servlet的名称 -->
+		<servlet-class>com.buaa.servlet.HelloServlet</servlet-class>     <!--Servlet的类名称 -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>              <!--Servlet的名称 -->
+		<url-pattern>/hello</url-pattern>               <!--Servlet的URL映射名 -->
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>showInfo</servlet-name>
+		<servlet-class>com.buaa.servlet.ShowInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>showInfo</servlet-name>
+		<url-pattern>/showInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>userInfo</servlet-name>
+		<servlet-class>com.buaa.servlet.UserInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userInfo</servlet-name>
+		<url-pattern>/userInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>redirect</servlet-name>
+		<servlet-class>com.buaa.servlet.RedirectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>redirect</servlet-name>
+		<url-pattern>/redirect</url-pattern>
+	</servlet-mapping>
+</web-app>
